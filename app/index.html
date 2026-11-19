@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">Grand Theft Auto VI · PlayStation 5 · all 55 official trophies: 1 platinum, 2 gold, 6 silver, 46 bronze. Names, descriptions and grades as PlayStation publishes them; every guide in our own words, with its sources.</p>
+    <div class="progress" role="progressbar" aria-label="Progress to the platinum">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <p class="progress-text" id="progressText">0 / 55 earned</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+    <nav class="tabs" aria-label="Views">
+      <button class="tab active" data-view="list">Checklist</button>
+      <button class="tab" data-view="roadmap">Roadmap to platinum</button>
+      <button class="tab" data-view="missable">Missable</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="view-list">
+    <div class="filters" role="search">
+      <input id="fSearch" type="search" placeholder="Search name or description…" aria-label="Search trophies">
+      <select id="fGrade" aria-label="Filter by grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <select id="fKind" aria-label="Filter by kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="strand">Side strand</option>
+        <option value="activity">Activity</option>
+        <option value="collectible">Collectible</option>
+        <option value="combat">Combat</option>
+        <option value="misc">Misc</option>
+        <option value="platinum">Platinum</option>
+      </select>
+      <select id="fStatus" aria-label="Filter by status">
+        <option value="all">Earned + todo</option>
+        <option value="earned">Earned only</option>
+        <option value="todo">Not earned yet</option>
+      </select>
+      <select id="fSort" aria-label="Sort">
+        <option value="id">Sort: official order</option>
+        <option value="grade">Sort: grade first</option>
+        <option value="name">Sort: name A–Z</option>
+        <option value="missable">Sort: missable first</option>
+      </select>
+      <label class="spoiler-toggle"><input type="checkbox" id="fSpoiler" checked> Hide story spoilers</label>
+    </div>
+    <p class="list-count" id="listCount"></p>
+    <div class="split">
+      <div class="checklist" id="checklist"></div>
+      <aside class="detail" id="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" hidden>
+    <p class="intro">The road to the platinum, in the order to play it — built from the official descriptions. Each phase shows how many of its trophies you have earned; click a trophy to open its guide.</p>
+    <div id="roadmap"></div>
+  </section>
+
+  <section id="view-missable" hidden>
+    <p class="intro">Five trophies can be missed. Everything else can be earned after the story — these five are tied to a story moment, a choice, or a partner who may not be around later. Clear them before the final mission.</p>
+    <div id="missableList"></div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <div class="save-row">
+    <button id="btnExport" type="button">Export progress (.json)</button>
+    <button id="btnImport" type="button">Import progress</button>
+    <input type="file" id="fileImport" accept=".json,application/json" hidden>
+    <button id="btnReset" type="button">Reset progress</button>
+    <span class="import-note" id="importNote"></span>
+  </div>
+  <p class="about">Your checklist is saved in this browser only (localStorage) — nothing leaves your machine, and this guide makes no network requests at all. Trophy names, descriptions and grades are the official PlayStation list of 2026-11-18; guides are our own words, with their sources named beside each one, and say plainly where a place is not pinned down. No Rockstar logo or official artwork: the look is our own. Built for the make.fun “Build the best GTA 6 trophy guide” bounty.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
